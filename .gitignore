@@ -3,3 +3,5 @@ adidasGallery.pem
 login.sh
 mongodb.txt
 nodeInstall.txt
+*.sh
+*.pem
