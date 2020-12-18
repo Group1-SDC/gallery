@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const router = require('./router');
+require('newrelic');
 
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
