@@ -7,7 +7,7 @@ require('newrelic');
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
 
-app.use(morgan('dev'));
+// app.use(morgan('dev')); // clogs up terminal during stress tests
 // loader.io verification for stress testing
 app.get('/loaderio-431bb85677ec2905b8cf0b7128b20219.txt', (req, res) => {
   res.send('loaderio-431bb85677ec2905b8cf0b7128b20219');
