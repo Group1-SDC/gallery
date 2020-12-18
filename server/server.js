@@ -8,6 +8,10 @@ const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
 
 app.use(morgan('dev'));
+// loader.io verification for stress testing
+app.get('/loaderio-431bb85677ec2905b8cf0b7128b20219.txt', (req, res) => {
+  res.send('loaderio-431bb85677ec2905b8cf0b7128b20219');
+});
 app.use('/:id', express.static(PUBLIC_DIR));
 
 // Handling asset requests for webpack bundles by passing off requests to the bundles router
